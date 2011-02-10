@@ -64,7 +64,7 @@ INSTALLATION INSTRUCTIONS
 Get the Code:
   git clone git://github.com/sharpee/mid.git mid
 
-Get the Demo:
+Optionally, get the Demo:
   git clone git://github.com/sharpee/mid-demo.git mid-demo
 
 Get the mxml package if not already installed on your system:
