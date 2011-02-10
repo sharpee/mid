@@ -68,12 +68,12 @@ Get the Demo:
   git clone git://github.com/sharpee/mid-demo.git mid-demo
 
 Get the mxml package if not already installed on your system:
-  git://github.com/sharpee/mxml.git mxml
-  cd mxml
-  git checkout tags/release-2.6
+  cd mid
+  git submodule init
+  git submodule update
+  cd mid/mxml-2.6
   make
-  make install
-  cd ..
+  make install (optionally to install this system-wide)
 
 Compile the M.I.D. build application:
   cd mid
