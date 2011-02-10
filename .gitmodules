@@ -1,0 +1,3 @@
+[submodule "mid/mxml-2.6"]
+	path = mid/mxml-2.6
+	url = git://github.com/sharpee/mxml.git
