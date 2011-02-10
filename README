@@ -92,9 +92,9 @@ Test the M.I.D. application for the standard analysis:
 
 Find the first informative dimension:
 
-cd ~/InstallFolder/DEMO-<YYYY-MM-DD>
+cd mid-demo
 
-../MID-v<X>.<Y>-<YYYY-MM-DD>/mid1d 1 params.xml 1
+../mid/mid/mid1d 1 params.xml 1
 
 The result is contained in the file:
 
@@ -106,7 +106,7 @@ V1model-1D-n1-v1-p1.dat
 Find the first two informative dimensions by simultaneous
 optimization:
 
-../MID-v<X>.<Y>-<YYYY-MM-DD>/midnd 2 params.xml 1
+../mid/mid/midnd 2 params.xml 1
 
 The two dimensions are contained in the files:
 
