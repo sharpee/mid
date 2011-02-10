@@ -72,8 +72,10 @@ Get the mxml package if not already installed on your system:
   git submodule init
   git submodule update
   cd mid/mxml-2.6
+  ./configure --prefix="$PWD"
   make
-  make install (optionally to install this system-wide)
+  make install
+  cd ../..
 
 Compile the M.I.D. build application:
   cd mid
