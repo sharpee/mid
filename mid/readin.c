@@ -16,10 +16,10 @@ void runChecks( FILE * inf, unsigned long Ntrials, int dimx, int dimy, int x0, i
 	  myerror("x offset plus sta width should be less than or equal to width + 1.");
 	if(Nv + y0 > dimy +1) 
 	  myerror("y offset plus sta height should be less than or equal to height + 1.");
-	if(x0 < 1 || x0 > Nh)
-	  myerror("x offset should be between 1 and Nh.");
-	if(y0 < 1 || y0 > Nh)
-	  myerror("y offset should be between 1 and Nv.");
+	if(x0 < 1 || x0 > dimx-Nh+1)
+	  myerror("x offset should be between 1 and 1+dimx-Nh.");
+	if(y0 < 1 || y0 > dimy-Nv+1)
+	  myerror("y offset should be between 1 and 1+dimy-Nv.");
 	long expectedFileSize = Ntrials*dimx*dimy*bytesPerData;
 	
     fseek(inf, 0L, SEEK_END);
