@@ -57,8 +57,9 @@ void readinframes_to_double(char *movieFile,double *stimuli, unsigned long Ntria
  
 
   inf=fopen(movieFile,"rb");
+  if (inf ==NULL)      erroropen(movieFile); 
 	runChecks(inf, Ntrials, dimx, dimy, x0, y0, Nh, Nv, cx, cy, sizeof(char));
-    if (inf ==NULL)      erroropen(movieFile);  
+     
     for(i=1;i<=Ntrials;i++){
       fread(b,sizeof(unsigned char),dimx*dimy,inf);
       if (ferror(inf)) myerror("error reading from movie file.");
@@ -93,10 +94,11 @@ void readinframes_as_double(char *movieFile,double *stimuli, unsigned long Ntria
   Patch ptc(dimx, dimy, x0-1, y0-1, Nh, Nv, cx, cy);
  
     inf=fopen(movieFile,"rb");
-	
+    if (inf ==NULL)  erroropen(movieFile);  
+    
 	runChecks(inf, Ntrials, dimx, dimy, x0, y0, Nh, Nv, cx, cy, sizeof(double));
  
-    if (inf ==NULL)  erroropen(movieFile);  
+
     for(i=1;i<=Ntrials;i++){
       fread(b,sizeof(double),dimx*dimy,inf);
       if (ferror(inf)) myerror("error reading from movie file.");
